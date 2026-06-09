@@ -1,0 +1,27 @@
+# Environments
+.env
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Database
+*.db
+*.sqlite3
+agent.db
+
+# Binaries / Executables
+*.exe
+cloudflared.exe
+ngrok.exe
+
+# Logs / Temp files
+*.log
+ngrok_output.txt
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/

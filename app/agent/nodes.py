@@ -241,6 +241,7 @@ _TOOL_TRIGGERS = {
     ],
     "search": [
         "movie", "movies", "cinema", "film",
+        "game", "games", "ps5", "xbox", "pc", "playstation",
         "news", "latest", "current", "today", "right now",
         "weather", "score", "price", "stock",
         "what's happening", "look up", "search",
@@ -269,8 +270,11 @@ _HAL_PATTERNS_BY_TOOL = {
     "search": [
         _re.compile(r"searching for you", _re.IGNORECASE),
         _re.compile(r"looking (that|it) up", _re.IGNORECASE),
-        _re.compile(r"here.{0,10}(are|is).{0,10}(some|the) (movies|films|results|news)", _re.IGNORECASE),
-        _re.compile(r"currently (in theaters|showing|playing)", _re.IGNORECASE),
+        _re.compile(r"here.{0,10}(are|is).{0,10}(some|the) (movies|films|results|news|games)", _re.IGNORECASE),
+        _re.compile(r"(currently|still) (in theaters|showing|playing|out)", _re.IGNORECASE),
+        _re.compile(r"(is|are) coming (out|soon)", _re.IGNORECASE),
+        _re.compile(r"just (came out|dropped|released)", _re.IGNORECASE),
+        _re.compile(r"is on (ps5|xbox|pc|switch)", _re.IGNORECASE),
     ],
 }
 

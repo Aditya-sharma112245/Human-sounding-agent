@@ -51,7 +51,7 @@ async def _dispatch_pending_followups() -> None:
             new_count = profile.get("message_count", 0) + 1
             await mem.update_profile(user_phone, {"message_count": new_count})
             
-            logger.info("[scheduler] follow-up #%d sent to %s", followup_id, user_phone)
+            logger.info("[scheduler] follow-up #%d sent to %s: '%s'", followup_id, user_phone, message)
         except Exception as e:
             logger.error(
                 "[scheduler] failed to send follow-up #%d to %s: %s",
